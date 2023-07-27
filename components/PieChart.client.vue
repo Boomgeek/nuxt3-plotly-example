@@ -69,6 +69,7 @@ const layout = [
   },
   {
     title: '[layout1] Pie Chart on `PieChart.client.vue`',
+    showlegend: false,
   },
 ];
 
