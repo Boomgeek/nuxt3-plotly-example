@@ -22,9 +22,6 @@ import {
   NuxtPlotlyHTMLElement,
 } from 'nuxt-plotly';
 
-// When you install the nuxt-plotly module please use the following syntax
-// import { NuxtPlotlyConfig, NuxtPlotlyData, NuxtPlotlyLayout } from 'nuxt-plotly'
-
 const x = [1, 2, 3, 4, 5];
 const y = [10, 20, 30, 20, 10];
 const data: NuxtPlotlyData = [
