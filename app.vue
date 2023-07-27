@@ -20,7 +20,7 @@ import {
   NuxtPlotlyData,
   NuxtPlotlyLayout,
   NuxtPlotlyHTMLElement,
-} from '../src/module';
+} from 'nuxt-plotly';
 
 // When you install the nuxt-plotly module please use the following syntax
 // import { NuxtPlotlyConfig, NuxtPlotlyData, NuxtPlotlyLayout } from 'nuxt-plotly'
