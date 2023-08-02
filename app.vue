@@ -34,6 +34,8 @@ const layout: NuxtPlotlyLayout = {
 const config: NuxtPlotlyConfig = { scrollZoom: true, displayModeBar: false };
 
 function myChartOnReady(plotlyHTMLElement: NuxtPlotlyHTMLElement) {
+  const { $plotly } = useNuxtApp();
+  console.log({ $plotly });
   console.log({ plotlyHTMLElement });
 
   plotlyHTMLElement.on?.('plotly_afterplot', function () {
@@ -42,6 +44,14 @@ function myChartOnReady(plotlyHTMLElement: NuxtPlotlyHTMLElement) {
 
   plotlyHTMLElement.on?.('plotly_click', function () {
     alert('You clicked this Plotly chart!');
+
+    // use plotly function via `$plotly` to download chart image
+    $plotly.downloadImage(plotlyHTMLElement as HTMLElement, {
+      format: 'png',
+      width: 800,
+      height: 600,
+      filename: 'newplot',
+    });
   });
 }
 </script>
